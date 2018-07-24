@@ -199,7 +199,6 @@
 
 			<script src="js/vendor/jquery-2.2.4.min.js"></script>
 			<script src="js/vendor/bootstrap.min.js"></script>
-			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
   			<script src="js/easing.min.js"></script>
 			<script src="js/hoverIntent.js"></script>
 			<script src="js/superfish.min.js"></script>
@@ -211,6 +210,21 @@
 			<script src="js/parallax.min.js"></script>
 			<script src="js/mail-script.js"></script>
 			<script src="js/main.js"></script>
+			<script>
+				// Initialize and add the map
+				function initMap() {
+				  // The location of Uluru
+				  var uluru = {lat: 45.524974, lng: -73.584165};
+				  // The map, centered at Uluru
+				  var map = new google.maps.Map(
+					  document.getElementById('map'), {zoom: 16, center: uluru});
+				  // The marker, positioned at Uluru
+				  var marker = new google.maps.Marker({position: uluru, map: map});
+				}
+					</script>
+					<script async defer
+					src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJTZudL1hJGhqMhieP0szfJrFvUPPXuak&callback=initMap">
+					</script>
 		</body>
 	</html>
 
